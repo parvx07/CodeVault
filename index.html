@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeVault - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <span class="nav-logo">CodeVault</span>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="statistics.html">Statistics</a>
+    </div>
+  </nav>
+
+  <div id="app">
+
+    <div class="form-card">
+      <div class="form-row">
+        <div>
+          <label for="title">Title</label>
+          <input id="title" type="text" placeholder="e.g. Debounce function">
+        </div>
+        <div>
+          <label for="lang">Language</label>
+          <select id="lang">
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>TypeScript</option>
+            <option>Java</option>
+            <option>C++</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-full">
+        <label for="tag">Tag (optional)</label>
+        <input id="tag" type="text" placeholder="e.g. utility">
+      </div>
+
+      <div class="form-full">
+        <label for="code">Code</label>
+        <textarea id="code" placeholder="Paste your code here."></textarea>
+      </div>
+
+      <div id="err" class="err">Please fill in both the title and code fields.</div>
+      <button class="btn-add" onclick="addSnippet()">+ Save Snippet</button>
+    </div>
+
+    <div id="search">
+      <input type="text" id="searchInput" placeholder="Search snippets" oninput="renderList()">
+    </div>
+
+    <div id="count"></div>
+    <div id="list"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
